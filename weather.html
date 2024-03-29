@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Report</title>
+	<!-- icon for website  -->
+	<link rel="icon" href="cloud.png" type="cloud/x-icon">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
  
@@ -15,53 +17,51 @@
     <!-- Logo and Navigation bar would go here -->
     <nav>
       <a href="#home" class = "active">Home</a>
-      <button onclick="toggleFlexbox('flexcontainer1')">Forecast</button>
-      <button onclick="toggleFlexbox('flexcontainer2')">Inclement Weather</button>
-      <div class="logo">Logo</div>
+      <button onclick="toggleFlexbox('flexcontainer1')" ><a href="#forecast">Forecast </a></button>
+      <button onclick="toggleFlexbox('flexcontainer2')" ><a href="#weather">Inclement Weather </a></button>
+      <div class="logo"><img src="cloud3.png" alt="Logo"></div>
       
     </nav>
   </header>
 
 
 
-  <main>
+  <main >
     <section class="report-container" id="home">
       <h1 style="color:black">Here are your weather reports</h1>
-      <div class="report-cards">
-        <div class="report-card">
+      <div class="report-cards" >
+        <div class="report-card" data-tilt>
           <h2>Weather for today</h2>
           <p>bla bla bla</p>
           <a href="#" class="learn-more">Learn More ></a>
         </div>
-        <div class="report-card">
+        <div class="report-card" data-tilt>
           <h2>Inclement Weather</h2>
           <p>Get notified about the weather conditions that matter to you.</p>
           <a href="#" class="learn-more">Learn More ></a>
         </div>
-        <div class="report-card">
+        <div class="report-card" data-tilt>
           <h2>Safety Concerns</h2>
           <p>Watch out for snowy weather!</p>
           <a href="#" class="learn-more">Learn More ></a>
         </div>
       </div>
     </section>
-    <section class="update-signup" id = "weather">
+    <section class="update-signup" id = "weather" data-tilt>
       <h2>Get Daily Weather Updates Here</h2>
       <p>Stay informed with daily weather updates tailored to you.</p>
     </section>
-    <section class="update-signup" id = "forecast">
+    <section class="update-signup" id = "forecast" data-tilt>
       <h2>Get The Full Forecast Here</h2>
       <p>Stay informed with daily weather updates tailored to you.</p>
     </section>
-    <section class="update-signup" id = "notification">
+    <section class="update-signup" id = "notification" data-tilt>
       <h2>Get Notifications Here</h2>
       <p>Stay informed with daily weather updates tailored to you.</p>
     </section>
+    <script src="vanilla-tilt.js"></script>
   </main>
-
-
-    
-
+  
 	
   <footer>
     <!-- Footer content goes here -->
