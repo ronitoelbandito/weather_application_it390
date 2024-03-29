@@ -3,7 +3,8 @@
 :root {
   --dark-bg: #FFFFFF;
   --light-text: #F2F2F7;
-  --accent-color: #5AC8FA;
+	--dark-text: black;
+  --accent-color: #13828d;
   --border-color: #3A3A3C;
   --button-hover: #4B98C6;
 }
@@ -14,6 +15,13 @@ body {
   background-color: var(--dark-bg);
   margin: 0;
   padding: 0;
+	box-sizing:  content-box;
+  padding-bottom: 300px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('we.jpeg');
+  background-size: cover;
 }
 
 nav {
@@ -21,7 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color:#3944BC;
+  border-bottom: 2px solid white;
 }
 
 nav a, .logo {
@@ -38,6 +46,7 @@ nav .logo {
 header button {
   padding: 0.5em 1em;
   background-color: var(--accent-color);
+  font-size: larger;
   color: var(--dark-bg);
   border: none;
   border-radius: 5px;
@@ -48,6 +57,10 @@ header button {
 header button:hover {
   background-color: var(--button-hover);
 }
+
+
+
+
 
 .report-container h1 {
   text-align: center;
@@ -64,12 +77,50 @@ header button:hover {
 
 .report-card {
   text-align: center;
-  padding: 2em;
-  background-color: var(--border-color);
-  border-radius: 10px;
   flex: 1;
   min-width: 250px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+	width: 90%;
+  max-width: 350px;
+  border-top: 1px solid rgba(255,255,255,0.65);
+  border-left: 1px solid rgba(255,255,255,0.65);
+  border-radius: 16px;
+  padding: 50px 25px;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 30px rgba(255, 255,0,0.1);
+  backdrop-filter: blur(5px);
 }
+
+.report-card h2{
+	color: rgba(255,255,255,0.9);
+  margin-top: 2px;
+  font-size: 1.75rem;
+}
+.report-card p{
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+}
+
+.report-card a{
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+  padding: 12px 40px;
+  border-radius: 50px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: black;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
 
 .learn-more {
   text-decoration: none;
@@ -78,21 +129,28 @@ header button:hover {
 }
 
 .update-signup {
+  border-top: 1px solid rgba(255,255,255,0.65);
+  border-left: 1px solid rgba(255,255,255,0.65);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 30px rgba(255, 255,0,0.1);
+  backdrop-filter: blur(5px);
   text-align: center;
   margin-top: 2em;
   padding: 2em 0;
-  background-color: var(--border-color);
   border-top: 1px solid var(--dark-bg);
 }
 
 .update-signup h2 {
   margin-bottom: 0.5em;
+	color: rgba(255,255,255,0.9);
+  margin-top: 2px;
+  font-size: 1.75rem;
 }
 
 footer {
   text-align: center;
   padding: 1em;
-  background-color: var(--dark-bg);
-  border-top: 1px solid var(--border-color);
+	color: var(--dark-text);
 }
 
